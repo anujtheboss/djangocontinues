@@ -31,4 +31,22 @@ if __name__ == "__main__":
 # to open admin pannel create superuser
 
 # views take the data and render to the html page
-# views and url is to be connected
+# views and url is to be connected\
+
+
+# When you run git add ., you are staging changes for the next commit. 
+# This command tells Git to add all changes in the current directory and its subdirectories to the staging area. 
+# The staging area, also known as the index, is an intermediate place where changes are prepared before being committed to the repository(local).
+
+# Operations: Commands like git add, git commit, git log, git status, and git diff operate within this local repository.
+# When you run git commit, Git creates a new commit object in the local repository. This commit object represents a snapshot of the changes that have been staged in the index (staging area) and includes metadata about the commit.
+
+# to link this local repository to remote repository:# Add a remote repository named "origin"
+        #   git remote add origin https://github.com/username/repository.git
+         # to verify:git remote -v
+# to add and commit changes to local repository
+        # git add .
+        # git commit -m "Initial commit"
+# to push the changes to remote repository
+        # # Push to the "main" branch (or "master", depending on your default branch)
+        #  git push -u origin main
