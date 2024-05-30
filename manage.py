@@ -33,6 +33,7 @@ if __name__ == "__main__":
 # views take the data and render to the html page
 # views and url is to be connected\
 
+# when we add and commit the 'M' symbol before file disappear as the modified changes is reflected to local repository
 
 # When you run git add ., you are staging changes for the next commit. 
 # This command tells Git to add all changes in the current directory and its subdirectories to the staging area. 
