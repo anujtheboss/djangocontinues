@@ -1,0 +1,30 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <!-- <link rel="stylesheet" href="/static/styles.css"> -->
+    <!-- <link rel="stylesheet" href="/static/style1.css"> -->
+   <link rel="stylesheet" href="{%static 'styles.css' %}">
+   <link rel="stylesheet" href="{%static 'style1.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              
+                <li class="{% if request.path == '/' %} active {% endif %}"><a href="/">Home</a></li>
+                <li class="{% if request.path == '/aboutus/' %} active {% endif %}"><a href="/aboutus">About Us</a></li>    
+                <li class="{% if request.path == '/services/' %} active {% endif %}"><a href="/services">Services</a></li>
+                <li class="{% if request.path == '/contact/' %} active {% endif %}"><a href="/contact">Contact</a></li>
+                <li class="{% if request.path == '/form/' %} active {% endif %}"><a href="/userform">Userform</a></li>
+
+            </ul>
+        </nav>
+        <!-- {{request.path}} -->
+                <!-- this shows in which page we are and what is the requested page or path -->
+
+    </header>
+                

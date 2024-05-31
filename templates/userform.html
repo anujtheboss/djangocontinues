@@ -1,0 +1,27 @@
+
+{% include 'header.html' %}
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <h2>Hello! {{name}}</h2>
+
+        <!-- <form method="get"> -->
+        <form method="post">
+            {% csrf_token %}
+<!-- post method using CSRF token for validation and security -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="names" value="{{name}}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{email}}" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="{{password}}" required>
+
+            <input type="submit" value="Submit">
+            <!-- in get method when we tap submit in html we can see the those input data passed in url  -->
+        </form>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}

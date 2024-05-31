@@ -21,7 +21,13 @@ def main():
 if __name__ == "__main__":
     main()
 
+# ========================================================include====================================
+# in include the header and footer are kept in separate html file and are included in each html file using {% include 'header.html'%}
 
+# ===========================================================extends===================================
+# in extends the header and footer remain static in one base.html file and the page content between them goes on changing 
+
+# ================================================database=====================================
 # we use sqlite3 database
 # SQLite is a self-contained, serverless, zero-configuration, transactional SQL database engine. It doesn't require a separate server process to operate. Instead, the entire database is stored in a single disk file, making it easy to set up and use.
 
@@ -29,12 +35,14 @@ if __name__ == "__main__":
 # create default table in db.sqlite3:python manage.py migrate
 #create superuser:python manage.py createsuperuser
 # to open admin pannel create superuser
-
+# ==============================================================end end end =================================
 # views take the data and render to the html page
 # views and url is to be connected\
 
-# when we add and commit the 'M' symbol before file disappear as the modified changes is reflected to local repository
+# =======================================git git git============================================
 
+# when we add and commit the 'M' symbol before file disappear as the modified changes is reflected to local repository
+# and U for untracted which is not added to the repository
 # When you run git add ., you are staging changes for the next commit. 
 # This command tells Git to add all changes in the current directory and its subdirectories to the staging area. 
 # The staging area, also known as the index, is an intermediate place where changes are prepared before being committed to the repository(local).
@@ -51,3 +59,4 @@ if __name__ == "__main__":
 # to push the changes to remote repository
         # # Push to the "main" branch (or "master", depending on your default branch)
         #  git push -u origin main
+# ==================================================end end end===============================================

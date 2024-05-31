@@ -19,6 +19,16 @@ from django.urls import path
 from mydjango import views
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("about-us/",views.aboutus)
+    path("course/<int:courseid>",views.course),
+    path("",views.home),
+    path("aboutus/",views.aboutus),   
+    #path("aboutus/",views.aboutus,name="about"), url method
+    #  <li><a href="{% url 'about' %}">About Us</a></li> use this in header.html for url method
+
+    path("contact/",views.contact),
+    path("services/",views.services),
+    path("userform/",views.forms)
+
+
     # create a url to render the content of views in browser
 ]
