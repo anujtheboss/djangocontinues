@@ -1,5 +1,6 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
+from .forms import userforms
 
 def home(request):
                                                     #  the request is from the home/ url
@@ -14,17 +15,23 @@ def home(request):
                                                     # to pass some variable from django page to html
      return render(request,"index.html")
 # http response cant call the page but render can
+
 def aboutus(request):
-     return render(request,"aboutus.html")
+    #  as soon as aboutus page is requested, this function is called
+    # this function gets the output passed in url and render to the aboutus page
+     if request.method=='GET':
+        output=request.GET.get('output')
+     return render(request,"aboutus.html",{'output':output})
 def contact(request):
      return render(request,"contact.html")
 def services(request):
      return render(request,"service.html")
-def forms(request):
+def submitform(request):
+     
+    #  form take data to the url as mentioned in the action of the form
+    # url in the action of the form call this function
      data={}
-    #  defining the dictionary
      try:
-        #   if request.method=="GET":
           if request.method=="POST":
             name=request.POST.get('names')
             email=request.POST.get('email')
@@ -34,7 +41,34 @@ def forms(request):
                 'email':email,
                 'password':password
             }
-            return HttpResponseRedirect("/aboutus/")
+            return HttpResponse(email)
+        #   the name would be responded to the submitform page
+     except:
+       pass
+    
+def forms(request):
+     fn=userforms()
+    #  creating form using django form
+     data={'form':fn}
+    
+    #  defining the dictionary
+     try:
+        #   if request.method=="GET":
+          if request.method=="POST":
+            name=request.POST.get('names')
+            email=request.POST.get('email')
+            password=request.POST.get('password')
+            data={
+                'form':fn,
+                'name':name,
+                'email':email,
+                'password':password
+            }
+            url="/aboutus/?output={}".format(name)
+            # send the ouput too to the redirected page in url
+            return HttpResponseRedirect(url)
+        #   for redirecting to some page just after submitting the form
+        
      except:
        pass
      return render(request,"userform.html",data)
