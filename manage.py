@@ -59,4 +59,10 @@ if __name__ == "__main__":
 # to push the changes to remote repository
         # # Push to the "main" branch (or "master", depending on your default branch)
         #  git push -u origin main
+        # When you use the -u option, you are telling Git to remember the remote branch (origin/main in this case) that your local branch (main) is tracking.
+        # after doing this you can use Instead of git push origin main, you can simply use git push.next time
+        # if you made any changes to the remote repository before pushing the files from local repo,you can first pull using (git pull origin main --allow-unrelated-histories) and again push
+# The error message "remote origin already exists" indicates that a remote repository named origin has already been set for your local repository.
+# if you want to set that origin for next repo do:
+    #  git remote set-url origin https://github.com/anujtheboss/djangocontinues.git
 # ==================================================end end end===============================================

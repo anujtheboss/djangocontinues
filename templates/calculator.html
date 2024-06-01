@@ -1,0 +1,33 @@
+
+{% include 'header.html' %}
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <h2>Hello! {{name}}</h2>
+        <form method="post">
+          <!-- if not use csrf token,error will be shown while submitting -->
+            {% csrf_token %}
+           <!-- post method using CSRF token for validation and security  -->
+           
+                                <label for="value1">num1</label>
+                                <input type="text" id="name"  name="value1" value="{{name}}" required>
+
+                                <label for="value2">num2</label>
+                                <input type="text" id="email" name="value2" value="{{email}}" required>
+                                <select name="operator" id="operator">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="*">*</option>
+                                    <option value="/">/</option>
+
+                                </select>
+                               
+                                <button class="calc" type="submit">calculate</button>
+                                <label>output</label>
+                                <input type="text" value="{{c}}" />
+                                 
+        </form>
+    </div>
+</body>
+</html>
+{% include 'footer.html' %}

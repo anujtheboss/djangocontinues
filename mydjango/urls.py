@@ -27,7 +27,8 @@ urlpatterns = [
     path("submitform/",views.submitform,name="submitform"),
     path("contact/",views.contact),
     path("services/",views.services),
-    path("userform/",views.forms)
+    # path("userform/",views.forms),
+    path("calculator/",views.calculator)
 
 
     # create a url to render the content of views in browser
