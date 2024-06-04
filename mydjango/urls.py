@@ -19,12 +19,12 @@ from django.urls import path
 from mydjango import views
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("course/<int:courseid>",views.course),
+    # path("course/<int:courseid>",views.course),
     path("",views.home),
     path("aboutus/",views.aboutus),   
     #path("aboutus/",views.aboutus,name="about"), url method
     #  <li><a href="{% url 'about' %}">About Us</a></li> use this in header.html for url method
-    path("submitform/",views.submitform,name="submitform"),
+    # path("submitform/",views.submitform,name="submitform"),
     path("contact/",views.contact),
     path("services/",views.services),
     # path("userform/",views.forms),

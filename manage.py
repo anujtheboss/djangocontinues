@@ -66,3 +66,4 @@ if __name__ == "__main__":
 # if you want to set that origin for next repo do:
     #  git remote set-url origin https://github.com/anujtheboss/djangocontinues.git
 # ==================================================end end end===============================================
+#  to create new app:python manage.py startapp news

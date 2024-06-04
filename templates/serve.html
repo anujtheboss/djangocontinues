@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<!-- {% include 'header.html' %} -->
+ {% block content %}
+ 
+    <div class="card-container">
+    {% for n in serviceData %}
+     <div class="card">
+        
+       <h2>{{ n.service_icon }}</h2>
+       <h3>{{ n.service_title }}</h3>
+       <!-- you can use custom template filter in django -->
+       <p>{{ n.service_des | lower }}</p>
+     </div>
+    {% endfor %}
+     <!-- <div class="card">
+       <h2>Card Title 2</h2>
+       <p>This is a description for the second card.</p>
+     </div>
+     <div class="card">
+       <h2>Card Title 3</h2>
+       <p>This is a description for the third card.</p>
+     </div>
+     <div class="card">
+       <h2>Card Title 4</h2>
+       <p>This is a description for the fourth card.</p>
+     </div>
+     <div class="card">
+       <h2>Card Title 5</h2>
+       <p>This is a description for the fifth card.</p>
+     </div>
+     <div class="card">
+       <h2>Card Title 6</h2>
+       <p>This is a description for the sixth card.</p>
+     </div> -->
+   </div>
+ 
+ 
+{% endblock %}
+<!-- {% include 'footer.html' %} -->
+  
