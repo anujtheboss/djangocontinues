@@ -1,5 +1,8 @@
-to begin the project: cmd command :django-admin startproject project_name//////
+## to begin the project: cmd command :
+      django-admin startproject project_name
 
-to create a new app::::python manage.py startapp commerce
+## to create a new app:
+      python manage.py startapp app_name
 
-to run the project: python manage.py runserver
+## to run the project: 
+     python manage.py runserver
